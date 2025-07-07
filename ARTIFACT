@@ -1,0 +1,19 @@
+// This work is released under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+// License details: https://creativecommons.org/publicdomain/zero/1.0/
+
+function introduce() {
+  const message = " Hi, I am Trinity, and I haven't used this tool in a while!";
+  let index = 0;
+
+  const interval = setInterval(() => {
+    if (index < message.length) {
+      process.stdout.write(message[index]);
+      index++;
+    } else {
+      clearInterval(interval);
+      process.stdout.write('\n Welcome back, Trinity!\n');
+    }
+  }, 75); // typing speed in milliseconds
+}
+
+introduce();
